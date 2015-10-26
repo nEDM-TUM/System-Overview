@@ -14,6 +14,8 @@ This machine provides the following functionality:
 * Special [SSH routing](#ssh-routing) (for e.g. OpenVPN and other access)
 * [Miscellaneous](#miscellaneous), system monitoring, UPS, system shutdown
 
+![Gateway machine in relation to the system]({{ site.baseurl }}/static/NetworkOverviewGM.png)
+
 [CRUX](https://crux.nu/) is the linux distribution used.  This means services
 are defined in: `/etc/rc.conf`.  This machine has the following IP addresses:
 
