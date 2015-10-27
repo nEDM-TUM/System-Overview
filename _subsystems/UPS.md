@@ -20,6 +20,8 @@ The UPS is available at the address [http://ups.1.nedm1](http://ups.1.nedm1)
 (available when connected with the [OpenVPN](Internal-DB.html#openvpn)).  See
 the [wiki]({{ site.fierlingerwiki }}) for login details.
 
+![UPS Home Page]({{ site.baseurl }}/static/UPSPage.png)
+
 The state of the UPS device is monitored in the [System Health
 DB](http://db.nedm1/page/monitor/nedm/system_health), including the current
 draw on the device.  These variables should *always* be monitored when adding a

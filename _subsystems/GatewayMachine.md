@@ -13,6 +13,7 @@ This machine provides the following functionality:
 * [DNS server](#dns-server) for local devices, allowing reference via name
 * Special [SSH routing](#ssh-routing) (for e.g. OpenVPN and other access)
 * [Miscellaneous](#miscellaneous), system monitoring, UPS, system shutdown
+* [How-To](#how-to), various instructions 
 
 ![Gateway machine in relation to the system]({{ site.baseurl }}/static/NetworkOverviewGM.png)
 
@@ -159,4 +160,17 @@ a push-button shutdown.
 System Health database.  This includes information from the [UPS](UPS.html),
 the [DB server](Internal-DB.html), and the gateway machine.
 * `PowerChute` - Monitors the [UPS](UPS.html) and shuts down if necessary.
+
+### How To:
+
+* Add a new device with a static IP to the network:
+  1. Define the address of the new device (currently between `.1-.100`) in the
+two files: `zone.nedm1` and `revp.192.168.1` (see [above](#dns-server)).
+  2. Add an entry in `dhcpd.conf` for the MAC ID of the device, referencing the
+just created address.
+  3. Restart the two services, `named` and `dhcpd` (must be `root`):
+{% highlight bash %}
+/etc/rc.d/named restart
+/etc/rc.d/dhcpd restart
+{% endhighlight %}
 
