@@ -64,6 +64,24 @@ wiki](https://fierlinger.wiki.tum.de/Connection+to+VPN+at+Osthalle#Administratio
 This provides simply a network drive for storage of files.  Note, this should
 not be confused with the [file server associated with the control database](Control-DB.html). 
 
+### File synchronization
+
+File sychronization happens behind the scenes using the [Cloud
+Station](https://www.synology.com/en-us/dsm/app_packages/CloudStation).
+This synchronizes files that are saved using the [nginx File
+Server]({{ site.url }}/FileServer-Docker).  To enable this, a port is tunneled to 
+`optimal.universe-cluster.de` using [autossh](GatewayMachine.html#ssh-routing).
+
+There is also a script that runs on this server which corrects the permissions
+of the files.  Otherwise these files are not transferred using CloudStation.
+The script is configured in `Control Panel -> Task Scheduler` to run every hour.
+
+{% highlight bash %}
+find /volume1/Measurements/nedm -user root -type d -exec chmod 775 {} \; 
+find /volume1/Measurements/nedm -user root -type f -exec chmod 664 {} \; 
+find /volume1/Measurements/nedm -user root -exec chown meas_daemon:users {} \;
+{% endhighlight %}
+
 ### CouchDB Monitoring 
 
 The CouchDB server is monitored via a docker container containing a munin
