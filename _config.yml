@@ -1,5 +1,6 @@
 fierlingerwiki: https://fierlinger.wiki.tum.de/Administration+Page
 baseurl: /System-Overview
+usertitle: System Overview
 collections:
   subsystems:
     output: true
