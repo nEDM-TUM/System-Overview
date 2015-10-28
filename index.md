@@ -1,21 +1,13 @@
 ---
 layout: basic
 ---
-<a id="introduction" class="anchor" href="#introduction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Introduction</h2>
+## Introduction
 
-<p>
 This set of pages documents the functionality of many non-software systems
 in the nEDM experiment.
-</p>
 
-<h3>
-<a id="available-pages" class="anchor" href="#available-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Available pages</h3>
-
-<ul>
+### Available pages
    {% for post in site.subsystems %}
-   <li>
-     <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a> - {{ post.description }}
-   </li>
+* [{{ post.title }}]({{ site.baseurl }}{{ post.url }}) - {{ post.description }}
    {% endfor %}
-</ul>
 
