@@ -90,9 +90,9 @@ however, that the devices need to be restarted either using the command
 `reboot` or by pulling and reinserting the power cable (safe on the read-only
 system).
 
-### HimbeereCouch/`pynedm`
+### `himbeerecouch`/`pynedm`
 
-`himbeerecouch` is a python module which is installed on the Netboot
+`himbeerecouch` is a python module, installed on the Netboot
 distribution, which is used by the Raspberry Pis to pull the code from the 
 [database](Control-DB.html) that should be run.  See [the documentation]({{ site.url }}/HimbeereCouch)
 for more details about how this works.  To update the software, use the
