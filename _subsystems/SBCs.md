@@ -36,9 +36,9 @@ mkfs.ext3 /dev/sbc2
 
 ### Updating the software on a running system
 
-After logging in to the SBC as as `root` (see the [wiki]({{ site.fierlingerwiki
-}})), the `ro` (read-only) and `rw` (read-write) alias commands should be
-available.  A normal system update would look like:
+After logging in to the SBC as as `root` (see the [wiki]({{ site.fierlingerwiki }})),
+the `ro` (read-only) and `rw` (read-write) alias commands should be available.
+A normal system update would look like:
 
 {% highlight bash %}
 rw # Make read-write
