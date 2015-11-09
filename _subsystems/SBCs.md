@@ -17,9 +17,9 @@ power at all times.
 
 ### Backup images
 
-* ORCA - Active Coil Compensation/Struck readout: a backup image for this SBC is here ([Cluster server](http://10.155.59.88/_attachments/nedm%2Fsystem_health/sbc_backup_cards/sbc.2.backup.gz) ) ([Osthalle server](http://db.nedm1/_attachments/nedm%2Fsystem_health/sbc_backup_cards/sbc.2.backup.g)).
+* ORCA - Active Coil Compensation/Struck readout: a backup image for this SBC is here ([Cluster server](http://10.155.59.88/_attachments/nedm%2Fsystem_health/sbc_backup_cards/sbc.2.backup.gz) ) ([Osthalle server](http://db.nedm1/_attachments/nedm%2Fsystem_health/sbc_backup_cards/sbc.2.backup.gz)).
 
-* CASCADE detectors - A backup image for this SBC is here ([Cluster server](http://10.155.59.88/_attachments/nedm%2Fsystem_health/sbc_backup_cards/sbc.cascade.backup.gz) ) ([Osthalle server](http://db.nedm1/_attachments/nedm%2Fsystem_health/sbc_backup_cards/sbc.cascade.backup.g)).
+* CASCADE detectors - A backup image for this SBC is here ([Cluster server](http://10.155.59.88/_attachments/nedm%2Fsystem_health/sbc_backup_cards/sbc.cascade.backup.gz) ) ([Osthalle server](http://db.nedm1/_attachments/nedm%2Fsystem_health/sbc_backup_cards/sbc.cascade.backup.gz)).
 
 
 
