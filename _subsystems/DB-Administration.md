@@ -1,3 +1,9 @@
+---
+title: Administration
+description: List of administration tasks for systems in the nEDM experiment.
+layout: basic
+---
+
 List of administration tasks that are commonly performed for the nEDM systems:
 
 * Administration of main linux servers (this includes software updates, etc.):
