@@ -12,12 +12,12 @@ List of administration tasks that are commonly performed for the nEDM systems:
   - [Gateway Machine](GatewayMachine.html)
     * Update/add devices to network
     * Update DHCP settings
-  - [UPS](UPS.html) [Admin interface](http://ups.1.nedm1/)
+  - [UPS](UPS.html), [Admin interface](http://ups.1.nedm1/)
 * Administration of network, including network switches
   - 2 unmanaged, 1 managed: [switch.1](http://switch.1.nedm1/)
 * Administration of [GitHub group repository](https://github.com/nedm-tum)
 * Monitoring
-  - [Local DB server](Internal-DB.html#couchdb-monitoring) [Admin interface](http://raid.nedm1:81/)
+  - [Local DB server](Internal-DB.html#couchdb-monitoring), [Admin interface](http://raid.nedm1:81/)
   - Usage on both Osthalle and Cluster DBs.
 * Raspberry Pis 
   - [Setting up new devices](Raspberry-Pi.html#setup)
