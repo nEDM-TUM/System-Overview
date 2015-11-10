@@ -1,6 +1,6 @@
 ---
-title: Raspberry Pis 
-description: How Raspberry Pis are used/programmed in the nEDM system 
+title: Raspberry Pis
+description: How Raspberry Pis are used/programmed in the nEDM system
 layout: basic
 order: 50
 ---
@@ -23,7 +23,7 @@ file system are propagated.  Read-only means that the devices are robust
 against (un)expected power failures.
 * Running scripts using [HimbeereCouch]({{ site.url }}/HimbeereCouch).  This
 allows the Raspberry Pis to pull the necessary code that they should run from
-the local database. 
+the local database.
 
 ### Setup
 
@@ -45,6 +45,22 @@ you're all set.
 
 _Note_: This *must* be on the nEDM network because it relies upon access to the
 [raid server's NFS](https://raid.nedm1:5001/).
+
+The next step is to ensure that communication with the CouchDB server is
+available and that a new user account is setup.  To figure out which
+credentials you need, you need to login in to the new Raspberry Pi.
+
+There are several tricks you can use here to grab the IP address:
+
+* look at the output of the logging of the [DHCP server](GatewayMachine.html#dhcp-server).
+* Use `nmap` with `sudo` (to output MAC IDs):
+{% highlight bash %}
+nmap -sP gateway.nedm1/24 | grep -B 2 Raspberry | awk '{ if ( $1 == "Nmap" ) printf "%s:\t", $5; if ( $1 == "MAC" ) print $3; }'
+{% endhighlight %}
+
+Once you have the IP address, you can login and grab the user credentials, as
+outlined [here]({{ site.url}}/HimbeereCouch/index.html#determine-credentials).
+
 
 ### Netbooting
 
@@ -71,7 +87,7 @@ As noted, all Raspberry Pis mount the NFS drive read-only.  To change (e.g.
 update or install new software), then the drive must re-mounted rw.  After one
 logs in as `root` (see the [wiki]({{ site.fierlingerwiki }})), then the `ro`
 (read-only) and `rw` (read-write) alias commands should be available.  A normal
-update would look like: 
+update would look like:
 
 {% highlight bash %}
 rw # Make read-write
@@ -94,7 +110,7 @@ system).
 ### `himbeerecouch`/`pynedm`
 
 `himbeerecouch` is a python module, installed on the Netboot
-distribution, which is used by the Raspberry Pis to pull the code from the 
+distribution, which is used by the Raspberry Pis to pull the code from the
 [database](Control-DB.html) that should be run.  See [the documentation]({{ site.url }}/HimbeereCouch)
 for more details about how this works.  To update the software, use the
 command:
@@ -116,13 +132,13 @@ The `himbeerecouch` daemon is run using `supervisor` and configured via the
 file (`/etc/supervisor/conf.d/raspberry.conf`):
 
 {% highlight ini %}
-[program:raspberry]                                                                                        
-command=python -c 'import himbeerecouch.prog as p; p.run("/etc/rspby/server")'                             
-autostart=true                                                                                             
-autorestart=true                                                                                           
-stopsignal=INT                                                                                             
-redirect_stderr=true                                                                                       
-stdout_logfile=/var/log/rspby_daemon.log 
+[program:raspberry]
+command=python -c 'import himbeerecouch.prog as p; p.run("/etc/rspby/server")'
+autostart=true
+autorestart=true
+stopsignal=INT
+redirect_stderr=true
+stdout_logfile=/var/log/rspby_daemon.log
 {% endhighlight %}
 
 ### Terminal and log servers
@@ -136,20 +152,20 @@ These are two daemons which are configured via:
 
 * `/etc/supervisor/conf.d/log.conf`:
 {% highlight ini %}
-[program:rspy_log]                                                                                         
-command=sudo -u daq sh -c 'cd /home/daq/terminado_server && python log.py'                                 
-autostart=true                                                                                             
-autorestart=true                                                                                           
-stderr_logfile=/var/log/rspby_log.err                                                                      
-stdout_logfile=/var/log/rspby_log.log   
+[program:rspy_log]
+command=sudo -u daq sh -c 'cd /home/daq/terminado_server && python log.py'
+autostart=true
+autorestart=true
+stderr_logfile=/var/log/rspby_log.err
+stdout_logfile=/var/log/rspby_log.log
 {% endhighlight %}
 * `/etc/supervisor/conf.d/terminado.conf`:
 {% highlight ini %}
-[program:terminado]                                                                                        
-command=sudo -u daq sh -c 'cd /home/daq/terminado_server && python server.py'                              
-autostart=true                                                                                             
-autorestart=true                                                                                           
-stderr_logfile=/var/log/terminado.err                                                                      
-stdout_logfile=/var/log/terminado.log                                                                      
+[program:terminado]
+command=sudo -u daq sh -c 'cd /home/daq/terminado_server && python server.py'
+autostart=true
+autorestart=true
+stderr_logfile=/var/log/terminado.err
+stdout_logfile=/var/log/terminado.log
 {% endhighlight %}
 
