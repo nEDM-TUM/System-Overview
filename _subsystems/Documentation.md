@@ -32,7 +32,13 @@ mkdir _subsystems # Store in this directory sub-pages (markdown) if needed
 git push origin gh-pages # push back to github to publish
 {% endhighlight %}
 
-### Documentation for project
+### Documentation for nEDM Interface
+
+This system is special and uses [jsdoc](http://usejsdoc.org/) to produce its
+documentation.  See [here]({{ site.url }}(/nEDM-Interface/tutorial-build_documentation.html)
+for more information.
+
+### Documentation for the overall nEDM project
 
 The overall documentation for the project should be edited in the
 [nEDM-TUM.github.io repository](https://github.com/nEDM-TUM/nEDM-TUM.github.io).
@@ -71,4 +77,6 @@ for i in Munin-Docker FileServer-Docker '+ other folders!'; do
  popd
 done
 {% endhighlight %}
+
+
 
