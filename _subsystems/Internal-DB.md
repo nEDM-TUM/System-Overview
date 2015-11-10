@@ -83,6 +83,8 @@ find /volume1/Measurements/nedm -user root -type f -exec chmod 664 {} \;
 find /volume1/Measurements/nedm -user root -exec chown meas_daemon:users {} \;
 {% endhighlight %}
 
+This synchronizes files located in `/volume1/Measurements`.
+
 ### CouchDB Monitoring 
 
 The CouchDB server is monitored via a docker container containing a munin
