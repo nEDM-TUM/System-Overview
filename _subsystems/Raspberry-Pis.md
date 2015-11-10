@@ -169,3 +169,18 @@ stderr_logfile=/var/log/terminado.err
 stdout_logfile=/var/log/terminado.log
 {% endhighlight %}
 
+### Currently running code
+
+At the moment, Raspberry Pis are being used to run:
+
+* Vibration readout
+* Climate control systems 
+* HeXe experiment device controls 
+* NMR trigger 
+* DMM readout (voltage drop to ground)
+* Temperature readout (interfaces with temperature control system)
+* Bilt source
+
+See [the admin page](http://db.nedm1/page/control/nedm/raspberries) for more
+details.
+
