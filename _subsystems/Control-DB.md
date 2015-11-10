@@ -2,6 +2,7 @@
 title: Slow control database 
 description: Overview of slow control database and associated systems. 
 layout: basic
+order: 3
 ---
 
 ## Slow control database and associated systems

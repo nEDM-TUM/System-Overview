@@ -2,6 +2,7 @@
 title: UPS 
 description: Information regarding the UPS
 layout: basic
+order: 50
 ---
 
 ## Uninterruptible Power Supply

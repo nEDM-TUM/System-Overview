@@ -2,6 +2,7 @@
 title: Raspberry Pis 
 description: How Raspberry Pis are used/programmed in the nEDM system 
 layout: basic
+order: 50
 ---
 
 ## Raspberry Pis

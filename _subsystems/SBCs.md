@@ -2,6 +2,7 @@
 title: Single-board computers (SBCs)
 description: Overview of single-board computers used in the nEDM experiment
 layout: basic
+order: 50
 ---
 
 SBCs are used in the nEDM experiment to:

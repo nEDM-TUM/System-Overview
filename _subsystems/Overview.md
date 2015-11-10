@@ -2,6 +2,7 @@
 title: Overview 
 description: Graphic overview of (basic) network structure 
 layout: basic
+order: 1
 ---
 
 ## Overview

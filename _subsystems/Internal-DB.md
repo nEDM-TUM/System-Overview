@@ -2,6 +2,7 @@
 title: Internal DB/Raid System
 description: Overview of database/raid system on the internal nEDM network. 
 layout: basic
+order: 3
 ---
 
 ## Internal DB/Raid System 

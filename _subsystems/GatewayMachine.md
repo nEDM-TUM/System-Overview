@@ -2,6 +2,7 @@
 title: Gateway Machine
 description: Information regarding gateway machine in the Osthalle.
 layout: basic
+order: 50
 ---
 
 ## Gateway Machine

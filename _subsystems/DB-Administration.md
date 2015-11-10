@@ -2,6 +2,7 @@
 title: Administration
 description: List of administration tasks for systems in the nEDM experiment.
 layout: basic
+order: 2
 ---
 
 List of administration tasks that are commonly performed for the nEDM systems:
