@@ -4,6 +4,8 @@ description: Writing documentation for different systems
 layout: basic
 ---
 
+## Documentation
+
 The documentation for different systems is written and publicized using
 [GitHub Pages](https://pages.github.com/).  This means that each repository
 (i.e. system) can have its own set of documentation pages.  It is important to
