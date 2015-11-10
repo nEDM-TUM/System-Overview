@@ -16,6 +16,7 @@ List of administration tasks that are commonly performed for the nEDM systems:
 * Administration of network, including network switches
   - 2 unmanaged, 1 managed: [switch.1](http://switch.1.nedm1/)
 * Administration of [GitHub group repository](https://github.com/nedm-tum)
+  - Pushing of production software to [DB interface]({{ site.url }}/nEDM-Interface).
 * Monitoring
   - [Local DB server](Internal-DB.html#couchdb-monitoring), [Admin interface](http://raid.nedm1:81/)
   - Usage on both Osthalle and Cluster DBs.
