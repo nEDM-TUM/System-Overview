@@ -116,3 +116,9 @@ here](Central-DB.html)) is running with the name: `nEDM-FileServer`.
 
 More details about the munin container can be found 
 [here]({{ site.url }}/Munin-Docker).
+
+### WiFi/WLAN
+
+The wireless internet dongle runs on the Synology server, giving access to the
+nEDM network in the Osthalle.
+
