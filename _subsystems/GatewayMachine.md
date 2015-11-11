@@ -14,7 +14,7 @@ This machine provides the following functionality:
 * [DNS server](#dns-server) for local devices, allowing reference via name
 * Special [SSH routing](#ssh-routing) (for e.g. OpenVPN and other access)
 * [Miscellaneous](#miscellaneous), system monitoring, UPS, system shutdown
-* [How-To](#how-to), various instructions 
+* [How-To](#how-to), various instructions
 
 ![Gateway machine in relation to the system]({{ site.baseurl }}/static/NetworkOverviewGM.png)
 
@@ -26,7 +26,7 @@ are defined in: `/etc/rc.conf`.  This machine has the following IP addresses:
 
 For access information, see the [wiki]({{ site.fierlingerwiki }}).  We do have
 an additional device (currently unused) which is currently deployed in the Hg
-tent. 
+tent.
 
 ### Firewall/router functionality
 
@@ -39,7 +39,7 @@ edited are located in `/etc/shorewall`.  Here are a few highlighted:
 {% highlight bash %}
 #ZONE   INTERFACE       BROADCAST       OPTIONS
 loc     eth1            -               dhcp
-net     eth0            -               dhcp 
+net     eth0            -               dhcp
 {% endhighlight %}
 * `/etc/shorewall/zones` - define _zones_ used by shorewall
 {% highlight bash %}
@@ -49,7 +49,7 @@ fw      firewall
 net     ipv4
 loc     ipv4
 {% endhighlight %}
-* `/etc/shorewall/policy` - define _policies_ used by shorewall.  The following only accepts from the internal network out (and to the firewall), and from the firewall to the internal network.  (To enhance security, one could also drop everything between the firewall and the internal network, but then explicit ports need to be opened, e.g. for DHCP/DNS, etc.) 
+* `/etc/shorewall/policy` - define _policies_ used by shorewall.  The following only accepts from the internal network out (and to the firewall), and from the firewall to the internal network.  (To enhance security, one could also drop everything between the firewall and the internal network, but then explicit ports need to be opened, e.g. for DHCP/DNS, etc.)
 {% highlight bash %}
 #SOURCE DEST    POLICY          LOG     LIMIT:          CONNLIMIT:
 #                               LEVEL   BURST           MASK
@@ -87,7 +87,7 @@ host csprobelaser.1 {
 where the `fixed-address` is defined by the [DNS Server](#dns-server).  Another
 important function that this provides is the necessary configuration for a
 class of devices, including Raspberry Pis and the power supplies used in the
-active coil compensation: 
+active coil compensation:
 {% highlight bash %}
 ...
 class "raspberries" {
@@ -113,7 +113,7 @@ network: (e.g. `*.nedm1`).  The relevant configuration files are
 `/var/named/revp.192.168.1` and `/var/named/zone.nedm1`.  *Both* files must be
 edited and the server restarted when a device is added.  An example excerpt:
 
-* `revp.192.168.1` 
+* `revp.192.168.1`
 {% highlight bash %}
 ...
 8 			PTR armin.nedm1.
@@ -124,7 +124,7 @@ edited and the server restarted when a device is added.  An example excerpt:
 11 			PTR ups.1.nedm1.
 ...
 {% endhighlight %}
-* `zone.nedm1` 
+* `zone.nedm1`
 {% highlight bash %}
 ...
 raid			A 	192.168.1.9
@@ -140,11 +140,11 @@ fastxeedm.1		A	192.168.1.12
 
 There are two `autossh` daemons that run to retain connections between the
 gateway machine and other machines, including `optimal.universe-cluster.de`
-(internal cluster machine) and `ucgate.universe-cluster-de` (public) machine. 
+(internal cluster machine) and `ucgate.universe-cluster-de` (public) machine.
 
 * `/etc/rc.d/autossh_init` - Provides tunneling between the DB on the internal
 network and `optimal`.  This is necessary for the replication/file
-synchronization that occurs between the [local DB](Internal-DB.html) and the [cluster DB](Cluster-DB.html). 
+synchronization that occurs between the [local DB](Internal-DB.html) and the [cluster DB](Cluster-DB.html).
 
 * `/etc/rc.d/autossh_init_ucgate` - Provides tunneling between the OpenVPN
 server (running on the [Internal DB](Internal-DB.html) server) and the publicly
