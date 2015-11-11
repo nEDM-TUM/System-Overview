@@ -153,14 +153,18 @@ accessible `ucgate.universe-cluster.de`.
 ### Miscellaneous
 
 Several additional daemons run on the gateway machine (these are defined to run
-in `/etc/rc.conf`): 
+in `/etc/rc.conf`):
 
-* `ser_daemon` - Monitors a serial connection on the motherboard which allows
-a push-button shutdown.
-* `health_daemon` - Monitors general health of the network and submits to the
-System Health database.  This includes information from the [UPS](UPS.html),
-the [DB server](Internal-DB.html), and the gateway machine.
+* [`ser_daemon`](https://github.com/nEDM-TUM/Slow-Control-Misc/blob/master/ser_daemon.py) -
+Monitors a serial connection on the motherboard which allows a push-button
+shutdown.
+* [`health_daemon`](https://github.com/nEDM-TUM/Slow-Control-Misc/blob/master/health_readout.py) -
+ Monitors general health of the network and submits to the System Health
+database.  This includes information from the [UPS](UPS.html), the
+[DB server](Internal-DB.html), and the gateway machine.
 * `PowerChute` - Monitors the [UPS](UPS.html) and shuts down if necessary.
+
+The first two are available in the [slow-control misc repository](https://github.com/nEDM-TUM/Slow-Control-Misc).
 
 ### How To:
 
