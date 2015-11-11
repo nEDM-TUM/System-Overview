@@ -35,7 +35,7 @@ git push origin gh-pages # push back to github to publish
 ### Documentation for nEDM Interface
 
 This system is special and uses [jsdoc](http://usejsdoc.org/) to produce its
-documentation.  See [here]({{ site.url }}(/nEDM-Interface/tutorial-build_documentation.html)
+documentation.  See [here]({{ site.url }}/nEDM-Interface/tutorial-admin.html#build_documentation)
 for more information.
 
 ### Documentation for the overall nEDM project
