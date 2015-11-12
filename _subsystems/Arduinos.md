@@ -39,6 +39,19 @@ work.  (When doing this, be careful not to format the SD card again!)  See
 [here](https://www.arduino.cc/en/Tutorial/ExpandingYunDiskSpace) and
 [here](http://wiki.openwrt.org/doc/howto/extroot) for more information.
 
+A couple more points regarding the Yun:
+
+* If the Yun fails to mount the SD card in the `/overlay` directory and instead
+mounts it in, `/tmp/overlay-disabled`, this is because the md5sum doesn't
+math.  (This will probably be the case.)  Using the SD card flashed from this
+version will likely require copying the md5sum, e.g.:
+{% highlight bash %}
+cp /.extroot.md5sum /tmp/overlay-disabled/etc/extroot.md5sum
+{% endhighlight %}
+See [here](https://forum.openwrt.org/viewtopic.php?id=28980) for more details.
+* The resolution of the name server seems not always to work.  For this reason,
+try converting IP names to IP addresses.
+
 #### Code
 
 <script src="https://gist.github.com/mgmarino/9ecdff8780a42ee803f5.js"></script>
