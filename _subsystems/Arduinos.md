@@ -34,6 +34,11 @@ The code on the Arduino Yun runs a simple [sketch](#code) as well as a
 [`pynedm` daemon](#code) which is started using an `init.d` script.
 Please see the image and code for more details.
 
+Note, that you must enable `extroot` on a new Arduino Yun device to have this
+work.  (When doing this, be careful not to format the SD card again!)  See
+[here](https://www.arduino.cc/en/Tutorial/ExpandingYunDiskSpace) and
+[here](http://wiki.openwrt.org/doc/howto/extroot) for more information.
+
 #### Code
 
 <script src="https://gist.github.com/mgmarino/9ecdff8780a42ee803f5.js"></script>
