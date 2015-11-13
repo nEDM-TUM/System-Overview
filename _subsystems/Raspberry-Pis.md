@@ -121,12 +121,7 @@ command:
 
 `pynedm` is a [software package]({{ site.url }}/Python-Slow-Control) which
 implements much of the functionality needed in the nEDM experiment.  It is
-installed on the Raspberry Pis since it is typically used in scripts pulled
-down by `himbeerecouch`. To update `pynedm` on the Raspberry Pis:
-
-{% highlight bash %}
-/etc/init.d/rspby install_py
-{% endhighlight %}
+installed on the Raspberry Pis automatically when `himbeerecouch` is installed.
 
 The `himbeerecouch` daemon is run using `supervisor` and configured via the
 file (`/etc/supervisor/conf.d/raspberry.conf`):
