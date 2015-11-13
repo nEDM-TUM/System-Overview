@@ -20,7 +20,7 @@ following:
 git clone git@github.com:nEDM-TUM/Orca.git
 cd Orca
 open Orca.xcodeproj # This should open XCode
-{% endhiglight %}
+{% endhighlight %}
 
 Once in Xcode, you should simply be able to build.
 
