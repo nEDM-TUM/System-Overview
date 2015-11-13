@@ -169,9 +169,9 @@ stdout_logfile=/var/log/terminado.log
 At the moment, Raspberry Pis are being used to run:
 
 * Vibration readout
-* Climate control systems 
-* HeXe experiment device controls 
-* NMR trigger 
+* Climate control systems
+* HeXe experiment device controls
+* NMR trigger
 * DMM readout (voltage drop to ground)
 * Temperature readout (interfaces with temperature control system)
 * Bilt source
