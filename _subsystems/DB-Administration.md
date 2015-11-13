@@ -21,5 +21,12 @@ List of administration tasks that are commonly performed for the nEDM systems:
 * Monitoring
   - [Local DB server](Internal-DB.html#couchdb-monitoring), [Admin interface](http://raid.nedm1:81/)
   - Usage on both Osthalle and Cluster DBs.
-* Raspberry Pis 
+* Raspberry Pis
   - [Setting up new devices](Raspberry-Pi.html#setup)
+
+_Note_: many of these tasks require administrative/root access to particular
+machines.  Access information to this is available
+[on the wiki]({{ site.fierlingerwiki }}) where you must be an "Organizer" of
+the wiki to be able to view/edit that page.
+
+
