@@ -23,6 +23,7 @@ List of administration tasks that are commonly performed for the nEDM systems:
   - Usage on both Osthalle and Cluster DBs.
 * Raspberry Pis
   - [Setting up new devices](Raspberry-Pis.html#setup)
+* Shutting down systems, other info: [wiki](https://fierlinger.wiki.tum.de/Administration+Page)
 
 _Note_: many of these tasks require administrative/root access to particular
 machines.  Access information to this is available
