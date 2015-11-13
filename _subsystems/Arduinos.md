@@ -49,8 +49,14 @@ version will likely require copying the md5sum, e.g.:
 cp /.extroot.md5sum /tmp/overlay-disabled/etc/extroot.md5sum
 {% endhighlight %}
 See [here](https://forum.openwrt.org/viewtopic.php?id=28980) for more details.
+
 * The resolution of the name server seems not always to work.  For this reason,
 try converting IP names to IP addresses.
+* Dealing with the Arduino Yun takes some knowledge about how
+[OpenWrt](https://openwrt.org/) works and will also require decent linux
+knowledge to debug issues.  (These will happen, the Arduino Yun system is not a
+particularly out-of-the-box-ready system for users who don't have much
+experience with such devices.)
 
 #### Code
 
