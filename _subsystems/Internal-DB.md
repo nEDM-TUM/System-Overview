@@ -104,7 +104,7 @@ mgmarino/munin-docker:latest.  Run this with the execution command: `echo
 (_Note_: This provides the static file structure to save the data from the
 munin process.  This container should run once and exit.)
 {% highlight bash %}
-docker run \
+docker run\
   --name munin-data-container\
   mgmarino/munin-docker\
   echo "Munin Data Container"
@@ -118,7 +118,7 @@ docker run -d -p 81:80\
 {% endhighlight %}
 
 *Note:* here we have assumed that the nEDM-FileServer ([see
-here](Central-DB.html)) is running with the name: `nEDM-FileServer`.  
+here](Central-DB.html)) is running with the name: `nEDM-FileServer`.
 
 More details about the munin container can be found 
 [here]({{ site.url }}/Munin-Docker).
